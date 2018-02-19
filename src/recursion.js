@@ -96,11 +96,7 @@ var exponent = function(base, exp) {
     return 1;
   } else {
     if (exp > 0) {
-      if (exponent % 2 === 0) {
-        debugger;
-        if (exponent % 4 === 0) {
-          return base * base * base * base * exponent(base, exp - 4);
-        }
+      if (exp % 2 === 0) {
         return base * base * exponent(base, exp - 2);
       }
       return base * exponent(base, exp - 1);
@@ -144,10 +140,17 @@ var palindrome = function(string) {
 
 // 11. Write a function that returns the remainder of x divided by y without using the
 // modulo (%) operator.
-// modulo(5,2) // 1
-// modulo(17,5) // 2
-// modulo(22,6) // 4
+
 var modulo = function(x, y) {
+  const ptvY = y < 0 ? y-y-y : y;
+  const ptvX = x < 0 ? x-x-x : x;
+  if (ptvX < ptvY) {
+    return x;
+  } else if (x > 0) {
+    return modulo(x - y, y);
+  } else if (x < 0) {
+    return modulo(x + ptvY, y);
+  }
 };
 
 // 12. Write a function that multiplies two numbers without using the * operator or
