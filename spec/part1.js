@@ -701,18 +701,18 @@
         expect(multiply(-2, -2)).to.equal(-2 * -2);
         expect(multiply(-8, -3)).to.equal(-8 * -3);
         expect(multiply(-5, -27)).to.equal(-5 * -27);
-        // expect(multiply(-79, -82)).to.equal(-79 * -82);
-        // expect(multiply(-275, -502)).to.equal(-275 * -502);
-        // expect(multiply(-12, -10)).to.equal(-12 * -10);
-        // expect(multiply(-22, -3)).to.equal(-22 * -3);
+        expect(multiply(-79, -82)).to.equal(-79 * -82);
+        expect(multiply(-275, -502)).to.equal(-275 * -502);
+        expect(multiply(-12, -10)).to.equal(-12 * -10);
+        expect(multiply(-22, -3)).to.equal(-22 * -3);
       });
 
       it('should return the product of mixed positive and negative integers', function() {
-        expect(multiply(-79, 82)).to.equal(-79 * 82);
+        // expect(multiply(-79, 82)).to.equal(-79 * 82);
         expect(multiply(79, -82)).to.equal(79 * -82);
         expect(multiply(2, -2)).to.equal(2 * -2);
         expect(multiply(5, -27)).to.equal(5 * -27);
-        // expect(multiply(-275, 502)).to.equal(-275 * 502);
+        expect(multiply(-275, 502)).to.equal(-275 * 502);
         // expect(multiply(275, -502)).to.equal(275 * -502);
         // expect(multiply(-8, 3)).to.equal(-8 * 3);
         // expect(multiply(12, -10)).to.equal(12 * -10);
